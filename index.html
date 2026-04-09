@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyl Soz - Цифрлық Веб Ресурстар</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5d4037; /* Қоңыр - көне кітап түсі */
+            --accent: #c0a080;  /* Алтын/құм түстес - ұлттық нақыш */
+            --gold: #d4af37;
+            --bg: #fdfaf1;     /* Ескі қағаз түсі */
+            --text: #2c3e50;
+            --main-text: #fff;  /* Ақ мәтін (Логотип фоны үшін) */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+        }
+
+        /* Жаңартылған Header - Логотипке арналған қараңғы фон */
+        header {
+            background-color: #121212; /* Логотиптің қараңғы фоны */
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 8px solid var(--gold);
+        }
+
+        /* Логотип суреті */
+        .header-logo {
+            max-width: 400px; /* Логотиптің максималды ені */
+            width: 100%;       /* Ұялы телефонда автоматты кішірейеді */
+            height: auto;       /* Пропорцияны сақтайды */
+            display: inline-block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin: 50px 0 30px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .section-header span {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            font-weight: bold;
+            border-radius: 20px 20px 0 0;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Карточка дизайны */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "⬥";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 30px rgba(93, 64, 55, 0.15);
+        }
+
+        .card h3 {
+            margin: 0 0 12px 0;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .link-btn {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: white !important;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+        }
+
+        .link-btn:hover {
+            background: var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background-image: radial-gradient(circle, var(--gold) 2px, transparent 2px);
+            background-size: 20px 20px;
+        }
+
+        .ornament {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header-logo { max-width: 300px; } /* Логотипті ұялы телефонда кішірейтеміз */
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header style="
+    background-color: #121212; /* Логотиптегідей қараңғы фон */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 8px solid #d4af37;
+">
+    <h1 style="
+        font-family: 'Comfortaa', cursive;
+        font-size: 4rem;
+        margin: 0;
+        letter-spacing: -2px;
+        color: #ffffff;
+    ">
+        <span style="color: #ffffff;">A</span><span style="color: #a855f7;">sylsoz</span>
+    </h1>
+    
+    <p style="
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 10px;
+        letter-spacing: 1px;
+        opacity: 0.9;
+    ">
+        әдебиетті оқытудың интерактивті әдістері
+    </p>
+
+    <div style="color: #d4af37; font-size: 1.5rem; margin-top: 20px;">✺ ❃ ✺</div>
+</header>
+
+<div class="container">
+
+    <div class="section-header">
+        <span>📖 Дизайн және Презентация</span>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Canva AI</h3>
+            <p>Презентация, постер және әдеби жұмыс парақтарын жасауға арналған №1 құрал.</p>
+            <a href="https://www.canva.com/create-new" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Gamma App</h3>
+            <p>Бір сөйлемнен толыққанды әдеби талдау презентациясын құрастырады.</p>
+            <a href="https://gamma.app" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Tome AI</h3>
+            <p>Шығарма желісін сторителлинг форматында слайдқа айналдыру.</p>
+            <a href="https://tome.app" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Beautiful.ai</h3>
+            <p>Интеллектуалды дизайн арқылы кәсіби деңгейдегі слайдтар.</p>
+            <a href="https://www.beautiful.ai" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Visme AI</h3>
+            <p>Ақын-жазушылардың өмірбаянын инфографика түрінде көрсету.</p>
+            <a href="https://www.visme.co" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Slidesgo AI</h3>
+            <p>Дайын шаблондар негізінде сабақ құрылымын автоматты жасау.</p>
+            <a href="https://slidesgo.com/ai/presentation-maker" class="link-btn" target="_blank">Ашу</a>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <span>🎨 Көрнекілік: Суреттер</span>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>DALL·E 3</h3>
+            <p>Шығармадағы табиғат көріністерін немесе эпизодтарды суретке айналдыру.</p>
+            <a href="https://openai.com/dall-e-3" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Leonardo AI</h3>
+            <p>Әдеби кейіпкерлерді (Абай, Ақбілек т.б.) жоғары сапада бейнелеу.</p>
+            <a href="https://leonardo.ai" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Playground AI</h3>
+            <p>Оқу постерлері мен иллюстрацияларға арналған тегін генератор.</p>
+            <a href="https://playground.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Bing Image</h3>
+            <p>Microsoft ұсынған қарапайым әрі қуатты сурет жасау құралы.</p>
+            <a href="https://www.bing.com/images/create" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Adobe Firefly</h3>
+            <p>Көркем мәтіндерді стильді графикалық иллюстрацияға айналдырады.</p>
+            <a href="https://firefly.adobe.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>NightCafe</h3>
+            <p>Әртүрлі стильдегі (майлы бояу, акварель) өнер туындыларын жасау.</p>
+            <a href="https://creator.nightcafe.studio" class="link-btn" target="_blank">Ашу</a>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <span>✂️ Дизайн және Өңдеу</span>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Remove.bg</h3>
+            <p>Суреттің фонын бір секундта алып тастау.</p>
+            <a href="https://www.remove.bg" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Pixlr AI</h3>
+            <p>Суреттерді онлайн өңдеу және коллаж жасау құралы.</p>
+            <a href="https://pixlr.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Photopea</h3>
+            <p>Браузердегі тегін Photoshop аналогы.</p>
+            <a href="https://www.photopea.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Cleanup.pictures</h3>
+            <p>Суреттегі артық жазулар мен заттарды өшіру.</p>
+            <a href="https://cleanup.pictures" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Fotor AI</h3>
+            <p>Фотоларды жақсарту және дизайн жасау платформасы.</p>
+            <a href="https://www.fotor.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <span>🎬 Видео және Анимация</span>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Runway ML</h3>
+            <p>Кино стиліндегі эффектілер мен видео генерациясы.</p>
+            <a href="https://runwayml.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Powtoon</h3>
+            <p>Мұғалімдерге арналған анимациялық түсіндірме видеолар.</p>
+            <a href="https://www.powtoon.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Pictory AI</h3>
+            <p>Мәтіннен автоматты түрде видео-сабақ құрастыру.</p>
+            <a href="https://pictory.ai" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Sketch Meta</h3>
+            <p>Қолмен салынған суреттерді қозғалысқа келтіру.</p>
+            <a href="https://sketch.metademolab.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Animaker</h3>
+            <p>Мультфильм түріндегі кейіпкерлерді жасау платформасы.</p>
+            <a href="https://www.animaker.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <span>🎮 Ойын және Бағалау</span>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Kahoot AI</h3>
+            <p>Сабақты жарыс түрінде қорытындылауға арналған викторина.</p>
+            <a href="https://kahoot.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Quizizz AI</h3>
+            <p>Мәтін бойынша автоматты тесттер құрастыру.</p>
+            <a href="https://quizizz.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Blooket</h3>
+            <p>Ойын арқылы жаңа тақырыпты бекіту құралы.</p>
+            <a href="https://www.blooket.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Wordwall</h3>
+            <p>Сәйкестендіру, дөңгелек және т.б. интерактивті ойындар.</p>
+            <a href="https://wordwall.net" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Mentimeter</h3>
+            <p>Сабақта оқушылармен кері байланыс орнату және дауыс беру.</p>
+            <a href="https://www.mentimeter.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <span>📝 Мәтін және Жоспарлау</span>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>ChatGPT</h3>
+            <p>Сабақ жоспары, эссе тақырыптары мен тапсырмалар генераторы.</p>
+            <a href="https://chatgpt.com" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>Diffit</h3>
+            <p>Мәтінді оқушылардың деңгейіне қарай бейімдеу құралы.</p>
+            <a href="https://web.diffit.me" class="link-btn" target="_blank">Ашу</a>
+        </div>
+        <div class="card">
+            <h3>MagicSchool AI</h3>
+            <p>Мұғалімдерге арналған барлық ИИ құралдары бір жерде.</p>
+            <a href="https://www.magicschool.ai" class="link-btn" target="_blank">Ашу</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="ornament">✺ ❃ ✺</div>
+    <p>&copy; 2026 <strong>ASYLSOZ</strong> - Цифрлық ресурстар жинағы</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Әдебиет пен технологияның тоғысқан жері</p>
+</footer>
+
+</body>
+</html>
